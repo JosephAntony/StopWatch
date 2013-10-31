@@ -1,21 +1,21 @@
-$(document).ready( function () {
-	
+$(document).ready(function () {
+	"use strict";
+	var height, width, myVar;
 	window.started = false;  // this variable has been declared to check whether 
 	                         // the watch has been started or not
 	                         // if this is not used if u keep on pressing the start button
 	                         // it will call the setinterval function again and again
 	                         // which could lead to faster movement of the seconds 
-	var height = $(window).height(); // used to the height of the window
-	var width = $(window).width();  
-	var myVar= '';          // used to store the variable returned by setinterval 
+	height = $(window).height(); // used to the height of the window
+	width = $(window).width();  
+	myVar = '';          // used to store the variable returned by setinterval 
 	
-	height = height/2 - parseInt($("#myDiv1").css("height"), 10)/2;    // used to set the div in the center
+	height = height / 2 - parseInt($("#myDiv1").css("height"), 10 ) / 2;    // used to set the div in the center
 	$("#mainDiv").css("top", height);
 	$("#mainDiv").css("width","100%");
-	widht = width/4;       // used to divide the main div to 4 
+	widht = width / 4;       // used to divide the main div to 4 
 	
 	reset();               // initially reseting the clock
-	
 	
 	$("#myDiv1").css("width", "20%");
 	$("#myDiv2").css("width", "20%");
